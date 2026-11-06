@@ -116,31 +116,17 @@ void GameModeLayer::backToMenu(Ref *sender)
 void GameModeLayer::initModeData()
 {
 	// init mode text data
-	auto lang = Application::sharedApplication()->getCurrentLanguage();
-	if (lang == LanguageType::kLanguageChinese)
-	{
-		modes[GameMode::OneVsOne] = {"1 VS 1", ""};
-		modes[GameMode::Classic] = {"3 VS 3", "经典模式"};
-		modes[GameMode::FourVsFour] = {"4 VS 4", ""};
-		modes[GameMode::HardCore_4Vs4] = {"硬核模式 (4 VS 4)", "禁用装备"};
-		modes[GameMode::Boss] = {"Boss模式 (3 VS 1)", ""};
-		modes[GameMode::Clone] = {"克隆模式 (3 VS 3)", ""};
-		modes[GameMode::Deathmatch] = {"死亡竞赛 (3 VS 3)", ""};
-		modes[GameMode::RandomDeathmatch] = {"随机死亡竞赛 (3 VS 3)", ""};
-	}
-	else // English
-	{
-		modes[GameMode::OneVsOne] = {"1 VS 1", ""};
-		modes[GameMode::Classic] = {"3 VS 3", "Classic Mode"};
-		modes[GameMode::FourVsFour] = {"4 VS 4", ""};
-		modes[GameMode::HardCore_4Vs4] = {"HardCore (4 VS 4)", "Disabled gear"};
-		modes[GameMode::Boss] = {"Boss (3 VS 3)", ""};
-		modes[GameMode::Clone] = {"Clone (3 VS 3)", ""};
-		modes[GameMode::Deathmatch] = {"Deathmatch (3 VS 3)", ""};
-		modes[GameMode::RandomDeathmatch] = {"Random Deathmatch (3 VS 3)", ""};
-	}
+	// English-first interface: do not switch game-mode labels based on device locale.
+	modes[GameMode::OneVsOne] = {"1 VS 1", ""};
+	modes[GameMode::Classic] = {"3 VS 3", "Classic Mode"};
+	modes[GameMode::FourVsFour] = {"4 VS 4", ""};
+	modes[GameMode::HardCore_4Vs4] = {"Hardcore (4 VS 4)", "Equipment disabled"};
+	modes[GameMode::Boss] = {"Boss (3 VS 1)", ""};
+	modes[GameMode::Clone] = {"Clone (3 VS 3)", ""};
+	modes[GameMode::Deathmatch] = {"Deathmatch (3 VS 3)", ""};
+	modes[GameMode::RandomDeathmatch] = {"Random Deathmatch (3 VS 3)", ""};
 
-	// init in developtment game modes
+	// initialize game modes still in development
 	modes[GameMode::Boss].isLocked = true;
 	modes[GameMode::Deathmatch].isLocked = true;
 	modes[GameMode::Deathmatch].useMask2 = true;
@@ -150,7 +136,7 @@ void GameModeLayer::initModeData()
 	{
 		auto &data = modes.at(i);
 		if (data.isLocked)
-			data.description += " (In developtment)";
+			data.description += " (In development)";
 		// data.handler = s_ModeHandlers[i];
 	}
 }
