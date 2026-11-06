@@ -68,7 +68,7 @@ public:
 	void onLoginBtn(Ref *sender);
 
 	void scrollMenu(int posY);
-	Sprite *menuText;
+	CCLabelTTF *menuText;
 
 	Layer *hardCoreLayer;
 
