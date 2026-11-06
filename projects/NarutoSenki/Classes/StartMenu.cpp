@@ -137,8 +137,7 @@ void MenuButton::ccTouchEnded(Touch *touch, Event *event)
 			break;
 		case MenuButtonType::HardCore:
 			SimpleAudioEngine::sharedEngine()->playEffect(SELECT_SOUND);
-			auto frame = getSpriteFrame("menu05_text.png");
-			_startMenu->menuText->setDisplayFrame(frame);
+			_startMenu->menuText->setString("Hardcore Mode");
 			_startMenu->onHardLayerCallBack();
 			break;
 		}
@@ -303,7 +302,8 @@ bool StartMenu::init()
 	exit_btn->setPositionY(_pos01);
 	_menuArray.push_back(exit_btn);
 
-	menuText = Sprite::createWithSpriteFrameName("menu02_text.png");
+	// Text-rendered title avoids Chinese baked into the menu atlas.
+	menuText = CCLabelTTF::create("Training", FONT_NAME, 18);
 	menuText->setAnchorPoint(Vec2(0, 0));
 	menuText->setPosition(Vec2(10, 2));
 	addChild(menuText, 5);
@@ -628,33 +628,31 @@ void StartMenu::scrollMenu(int posY)
 		}
 	}
 
-	string src;
+	const char *text = "Training";
 	for (auto menu : _menuArray)
 	{
-		if (menu->_isTop)
+		if (!menu->_isTop)
+			continue;
+		switch (menu->getBtnType())
 		{
-			switch (menu->getBtnType())
-			{
-			case MenuButtonType::Training:
-				src = "menu02_text.png";
-				break;
-			case MenuButtonType::Custom:
-				src = "menu01_text.png";
-				break;
-			case MenuButtonType::Credits:
-				src = "menu04_text.png";
-				break;
-			case MenuButtonType::Exit:
-				src = "menu03_text.png";
-				break;
-			default:
-				break;
-			}
+		case MenuButtonType::Training:
+			text = "Training";
+			break;
+		case MenuButtonType::Custom:
+			text = "Game Modes";
+			break;
+		case MenuButtonType::Credits:
+			text = "Credits";
+			break;
+		case MenuButtonType::Exit:
+			text = "Exit Game";
+			break;
+		case MenuButtonType::HardCore:
+			text = "Hardcore Mode";
+			break;
 		}
 	}
-
-	auto frame = getSpriteFrame(src);
-	menuText->setDisplayFrame(frame);
+	menuText->setString(text);
 }
 
 void StartMenu::keyBackClicked()
