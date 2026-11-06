@@ -34,15 +34,19 @@ The README is already available in English. This is a game UI localization proje
 - Source strings: translated six Chinese values in `Config/strings.xml` while preserving the dictionary keys and original English news notice.
 - Mode selector: removed locale-based Chinese names, corrected Boss mode to `3 VS 1`, and fixed `In development` wording.
 - Start menu: the selection-description text now uses `CCLabelTTF` with English strings rather than `menu0*_text.png` frames. Other graphic text remains untouched.
+- Character select: the selected hero's name is now rendered as English TTF text via `ui.newTTFLabel`, with explicit readable names for selected special forms and camel-case fallback. Positioning/font sizing require runtime inspection.
 - Atlas metadata audit: `Menu` has 49 frames, `Select` 143, `UI` 276, `Result` 77, and `Record2` 208. Not all frames contain text.
-- Sprite review tooling: `tools/export_text_sprites.py` exports possible text sprites from TexturePacker PNG/plist pairs with original dimensions and a CSV manifest for human translation review. Requires Python 3 and Pillow. Use:
+- Sprite review tooling: `tools/export_text_sprites.py` exports possible text sprites from TexturePacker PNG/plist pairs with original dimensions and a CSV manifest for human translation review. `tools/repack_english_sprites.py` can inject reviewed replacement PNGs into the *same original fixed atlas rectangles*, refusing oversized artwork and leaving the original files untouched. Both require Python 3 and Pillow. Use:
 
 ```bash
 python3 -m pip install Pillow
 python3 tools/export_text_sprites.py --output english-sprite-audit
+# Edit only reviewed frames under english-sprite-audit/<Atlas>/<Frame>.png.
+python3 tools/repack_english_sprites.py --replacements english-sprite-audit \
+    --output english-repacked-atlases
 ```
 
-**Blocker for image translation:** The connected repository reader exposed text and atlas metadata, but not binary PNG contents. The sprite art has **not** been visually inspected or replaced. The export utility can run in a checkout with the assets; generated English artwork must be verified and imported separately. No game build or smoke test has run.
+**Blocker for image translation:** The connected repository reader exposed text and atlas metadata, but not binary PNG contents. The sprite art has **not** been visually inspected or replaced in the checked-in game resources. The export utility can run in a checkout with the assets; generated English artwork must be verified and imported separately. No game build or smoke test has run.
 
 ### Phase 2: image-bearing UI assets
 
