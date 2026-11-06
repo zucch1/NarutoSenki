@@ -1,6 +1,32 @@
 --
 -- SelectLayer
 --
+-- English text labels replace character-name artwork baked into Select.png.
+local localizedCharacterNames = {
+    RockLee = "Rock Lee",
+    SageNaruto = "Sage Naruto",
+    RikudoNaruto = "Six Paths Naruto",
+    NarutoRikudo = "Six Paths Naruto",
+    SageJiraiya = "Sage Jiraiya",
+    ImmortalSasuke = "Immortal Sasuke",
+    HokageMinato = "Hokage Minato"
+}
+
+local function newEnglishCharacterName(key)
+    local text = localizedCharacterNames[key] or key:gsub("(%l)(%u)", "%1 %2")
+    local label = ui.newTTFLabel({
+        text = text,
+        font = "Arial",
+        size = 16,
+        color = ccc3(255, 255, 255),
+        outlineColor = ccc3(22, 22, 22),
+        outlineWidth = 1
+    })
+    label:setAnchorPoint(CCPoint(0.5, 0))
+    label:setPosition(CCPoint(100, 20))
+    return label
+end
+
 function SelectLayer:init()
     log('Initial SelectLayer...')
 
@@ -196,8 +222,7 @@ function SelectLayer:init()
         heroHalfImage:setAnchorPoint(0, 0)
         self:addChild(heroHalfImage, 1)
 
-        local heroName = display.newSprite('#' .. hero .. '_font.png', 100, 20)
-        heroName:setAnchorPoint(0.5, 0)
+        local heroName = newEnglishCharacterName(hero)
         self:addChild(heroName, 5)
 
         self._heroName = heroName
@@ -417,8 +442,7 @@ function SelectLayer:setSelected(btn)
         self:addChild(self._heroHalfImage, 1)
 
         self._heroName:removeFromParent()
-        self._heroName = display.newSprite(charName .. '_font.png', 100, 20)
-        self._heroName:setAnchorPoint(CCPoint(0.5, 0))
+        self._heroName = newEnglishCharacterName(btn._charName)
         self:addChild(self._heroName, 5)
     elseif not self._com1Select then
         self._comSelector1:setDisplayFrame(
