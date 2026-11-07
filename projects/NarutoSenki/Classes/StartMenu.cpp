@@ -1,4 +1,5 @@
 #include "StartMenu.h"
+#include "Constants/UiFlowKeys.hpp"
 
 GameMode s_GameMode = GameMode::Classic;
 std::array<std::unique_ptr<IGameModeHandler>, GameMode::__Internal_Max_Length> s_ModeHandlers = {
@@ -394,10 +395,14 @@ void StartMenu::onLangBtn(Ref *sender)
 	SimpleAudioEngine::sharedEngine()->playEffect("Audio/Menu/confirm.ogg");
 	Lang::toggle();
 
-	// Rebuild the menu so every sprite picks up the other language
-	auto menuScene = Scene::create();
-	menuScene->addChild(StartMenu::create());
-	Director::sharedDirector()->replaceScene(TransitionFade::create(0.5f, menuScene));
+	// Rebuild the menu so every sprite picks up the other language. Go through
+	// Lua like the other start-menu paths, so StartMenu:init() runs too.
+	if (!lua_call_func(UiFlowKeys::kReloadStartMenu))
+	{
+		auto menuScene = Scene::create();
+		menuScene->addChild(StartMenu::create());
+		Director::sharedDirector()->replaceScene(TransitionFade::create(0.5f, menuScene));
+	}
 }
 
 void StartMenu::onLoginBtn(Ref *sender)

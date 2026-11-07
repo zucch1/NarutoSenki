@@ -95,3 +95,13 @@ function onGameOver()
     menuScene:addChild(menuLayer)
     director.replaceSceneWithFade(menuScene, 1.25)
 end
+
+-- Called from C++ (StartMenu::onLangBtn) after the language is switched
+function reloadStartMenu()
+    local menuScene = CCScene:create()
+    local menuLayer = StartMenu:create()
+
+    hook.registerInitHandlerOnly(menuLayer)
+    menuScene:addChild(menuLayer)
+    director.replaceSceneWithFade(menuScene, 0.5)
+end

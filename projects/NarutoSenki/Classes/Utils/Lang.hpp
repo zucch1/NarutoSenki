@@ -21,11 +21,22 @@ static const char *kKey = "language";
 static const char *kEnglish = "en";
 static const char *kChinese = "zh";
 
-// Atlases that have English overrides. Used to re-apply/undo them when the
-// language is switched at runtime.
-static const char *kOverriddenAtlases[] = {
-	"Menu.plist", "Result.plist", "Select.plist", "Gears.plist",
-	"Record.plist", "Record2.plist", "Ougis.plist",
+// Atlases that have English overrides, each with one of its frames. A frame
+// still being in the cache tells us the atlas is resident, so a language switch
+// only reloads what is actually loaded (the full set is ~50 MiB of textures).
+struct OverriddenAtlas
+{
+	const char *plist;
+	const char *probeFrame;
+};
+static const OverriddenAtlas kOverriddenAtlases[] = {
+	{"Menu.plist", "menu02_text.png"},
+	{"Result.plist", "surrender_tips.png"},
+	{"Select.plist", "tip1.png"},
+	{"Gears.plist", "gearDetail_00.png"},
+	{"Record.plist", "change_btn.png"},
+	{"Record2.plist", "Asuma_label1.png"},
+	{"Ougis.plist", "gameStart_001.png"},
 };
 
 static inline std::string current()
@@ -88,8 +99,10 @@ static inline void removeOverride(const std::string &plist)
 	cocos2d::CCSpriteFrameCache::sharedSpriteFrameCache()->removeSpriteFramesFromFile(overridePath(plist).c_str());
 }
 
-// Switch language and reload the overridden atlases so the change shows at once.
-// Callers should rebuild their scene afterwards.
+// Switch language. Atlases currently in the frame cache are reloaded so the
+// change shows at once (callers should rebuild their scene afterwards); the
+// rest are only unregistered, so their next addSprites() loads the right
+// language. Nothing that isn't already loaded gets loaded here.
 static inline void set(const std::string &lang)
 {
 	auto ud = cocos2d::CCUserDefault::sharedUserDefault();
@@ -97,12 +110,18 @@ static inline void set(const std::string &lang)
 	ud->flush();
 
 	auto cache = cocos2d::CCSpriteFrameCache::sharedSpriteFrameCache();
-	for (auto plist : kOverriddenAtlases)
+	for (const auto &atlas : kOverriddenAtlases)
 	{
-		removeOverride(plist);
-		cache->removeSpriteFramesFromFile(plist);
-		cache->addSpriteFramesWithFile(plist);
-		applyOverride(plist);
+		bool resident = cache->spriteFrameByName(atlas.probeFrame) != nullptr;
+		// Drop both versions of the frames and forget both plists, so
+		// addSpriteFramesWithFile() won't skip them as already loaded.
+		removeOverride(atlas.plist);
+		cache->removeSpriteFramesFromFile(atlas.plist);
+		if (resident)
+		{
+			cache->addSpriteFramesWithFile(atlas.plist);
+			applyOverride(atlas.plist);
+		}
 	}
 }
 
