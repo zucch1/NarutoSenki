@@ -79,6 +79,17 @@ python3 tools/repack_english_sprites.py --replacements english-generated-sprites
 - Canon-recognizable roots: Wind Style: Whirlwind Fist, Flying Swallow, and Fire Style: Burning Ash. The precise modifiers for `翠岚烈斩`, `飞燕空穿`, and `狼牙伐锥` are either distinct from known established technique names or game-specific; do not silently map them to a different official jutsu.
 - Generated English comparison artwork is a **mockup**, not proof that text fits the original tiny 17–18px-high frames. Rendering requires reflow or increasing sprite frame space with proper plist changes; the strict repacker deliberately rejects overflow.
 
+### First accepted skill batch implemented: Asuma (2026-11-06)
+
+- User accepted all five translated Asuma descriptions shown in the comparison batch (including game-specific technique subtitles). Acceptance is for the **game's wording**, not a claim that every subtitle is a canonical licensed technique name.
+- `lua/ui/SkillLayer.lua` now renders those five entries as English `ui.newTTFLabel` labels instead of displaying `Asuma_label1.png`–`Asuma_label5.png`. The original atlas and frame keys remain unchanged as a source reference; other characters and unlock labels still use their original art.
+- Examined `SkillLayer:setSkillExplain` and its `update(dt)` scrolling behavior. The existing `Record2/clipperMask.png` stencil is **232 × 20 px**, while the five Chinese source frames were **17–18 px** tall with varying widths. The English text is rendered at **14 px Arial**, white with a 1px dark outline, and scrolls through the existing single-line mask at **70 design units/second**. The reset point uses the real mask width rather than the original 320px reset for the English lines.
+- The selected skill's prior **clipping node** now gets removed when changing skills; the old code removed only the label and accumulated empty stencils.
+- All five records in `Doc/ENGLISH_SPRITE_AUDIT.csv` are now `accepted_runtime_implemented` (not `approved_for_rendering`, since these do not need new PNGs).
+- A **font-metric simulation** using a Liberation Sans/Arial-like 14px font with 1px stroke measured ~15px drawn glyph height, fitting within the 20px stencil. Approximate original text widths: 507, 564, 648, 530, 689px; complete scroll traversals at 70 units/sec: ~10.6, 11.4, 12.6, 10.9, 13.2s. These measurements are **not** an actual game screenshot or device proof.
+
+**Validation still required:** run the game, inspect visible English characters/outline/ascenders/descenders on both desktop and Android, confirm the clipper at correct placement, exercise all five skill buttons (and an unreviewed character), and check switching repeatedly does not leave nodes behind. No gameplay build has run yet.
+
 ### Phase 2: image-bearing UI assets
 
 - [ ] Inspect actual rendered contents of `Menu.png`, `Select.png`, `UI.png`, `Result.png`, `NamePlate.png`, and `GameMode/*.png` to distinguish pictograms from Chinese text.
