@@ -1,6 +1,26 @@
 --
--- SelectLayer
+-- SkillLayer
 --
+
+-- Asuma's first five skill descriptions were visually translated from
+-- Record2.png and approved for the English-first build. Other heroes continue
+-- to use their original sprite frames until their text is reviewed.
+local englishSkillDescriptions = {
+    Asuma = {
+        [1] = "Wind Style: Whirlwind Fist - Deals ninjutsu damage and staggers enemies ahead.",
+        [2] = "Jade Gale Slash - Dashes forward and deals area ninjutsu damage that staggers enemies.",
+        [3] = "Flying Swallow: Sky Pierce - Asuma channels chakra into his blades and hits enemies ahead repeatedly.",
+        [4] = "Wolf Fang Strike - Secret art: slashes nearby enemies repeatedly with chakra blades.",
+        [5] = "Fire Style: Burning Ash - Secret Art 2: releases an ash cloud, ignites it, and burns enemies for several seconds."
+    }
+}
+
+-- The existing Record2/clipperMask.png is 232 x 20 px. Keep the existing
+-- single-line marquee and mask; render translated text at a legible size
+-- instead of squeezing full English sentences into 17-18px-tall atlas frames.
+local ENGLISH_SKILL_FONT_SIZE = 14
+local ENGLISH_SKILL_SCROLL_SPEED = 70 -- design units per second
+
 local transformList = {
     ['Naruto'] = 'SageNaruto',
     ['SageNaruto'] = 'RikudoNaruto',
@@ -18,6 +38,9 @@ SkillLayer = class('SkillLayer', function() return display.newLayer() end)
 function SkillLayer:ctor(selectLayer)
     self._selectLayer = selectLayer
     self._skillExplain = nil
+    self._skillClipper = nil
+    self._skillClipWidth = 0
+    self._englishSkillExplain = false
 
     self._buyLayer = nil
     self._buyType = SelectButton.Type.Menu
@@ -327,23 +350,51 @@ end
 
 function SkillLayer:setSkillExplain(buttonType)
     audio.playSound('Audio/Menu/select.ogg')
-    if self._skillExplain then self._skillExplain:removeFromParent() end
+
+    -- Remove the previous clipping node too, not only its child label.
+    -- Otherwise every skill selection leaves behind an empty stencil.
+    if self._skillClipper then
+        self._skillClipper:removeFromParent()
+        self._skillClipper = nil
+    end
+    self._skillExplain = nil
+    self._englishSkillExplain = false
 
     local imgPath
+    local englishText
     if buttonType == SelectButton.Type.Unlock1 then
         imgPath = 'fenglabel.png'
     elseif buttonType == SelectButton.Type.Unlock2 then
         imgPath = 'fenglabel2.png'
     else
-        imgPath = self.selectHero .. '_label' .. (buttonType - 2) .. '.png'
+        local index = buttonType - 2
+        imgPath = self.selectHero .. '_label' .. index .. '.png'
+        local heroDescriptions = englishSkillDescriptions[self.selectHero]
+        englishText = heroDescriptions and heroDescriptions[index]
     end
 
     local clipper = CCClippingNode:create()
     local stencil = display.newSprite('#clipperMask.png')
     stencil:setAnchorPoint(0, 0)
     clipper:setStencil(stencil)
+    self._skillClipWidth = stencil:getContentSize().width
 
-    self._skillExplain = display.newSprite('#' .. imgPath)
+    if englishText then
+        -- Fits the original 20px-high marquee, but permits the English text
+        -- to scroll at natural width rather than overcompressing the font.
+        self._skillExplain = ui.newTTFLabel({
+            text = englishText,
+            font = "Arial",
+            size = ENGLISH_SKILL_FONT_SIZE,
+            color = ccc3(255, 255, 255),
+            outlineColor = ccc3(26, 22, 20),
+            outlineWidth = 1
+        })
+        self._englishSkillExplain = true
+    else
+        self._skillExplain = display.newSprite('#' .. imgPath)
+    end
+
     self._skillExplain:setAnchorPoint(0, 0)
     self._skillExplain:setPositionX(10)
 
@@ -352,18 +403,24 @@ function SkillLayer:setSkillExplain(buttonType)
                             self.bgSprite:getContentSize().height / 2 + 4)
     clipper:addChild(self._skillExplain)
 
+    self._skillClipper = clipper
     self:addChild(clipper, 600)
 end
 
 function SkillLayer:update(dt)
     if not self._skillExplain or not self._autoMove then return end
 
-    local lableX = self._skillExplain:getContentSize().width
+    local labelWidth = self._skillExplain:getContentSize().width
+    local offset = self._englishSkillExplain and
+        (ENGLISH_SKILL_SCROLL_SPEED * dt) or 0.6
 
-    if self._skillExplain:getPositionX() >= -lableX then
-        self._skillExplain:setPositionX(self._skillExplain:getPositionX() - 0.6)
+    if self._skillExplain:getPositionX() >= -labelWidth then
+        self._skillExplain:setPositionX(self._skillExplain:getPositionX() - offset)
     else
-        self._skillExplain:setPositionX(320)
+        -- Translated text re-enters from the actual clipping edge;
+        -- unreviewed sprites preserve their original scrolling behavior.
+        self._skillExplain:setPositionX(
+            self._englishSkillExplain and self._skillClipWidth or 320)
     end
 end
 
