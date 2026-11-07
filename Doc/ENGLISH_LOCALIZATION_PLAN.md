@@ -72,6 +72,13 @@ python3 tools/repack_english_sprites.py --replacements english-generated-sprites
 - **Raster text generation:** Added `tools/render_english_sprite_text.py`. It generates a transparent, original-size English PNG only when the sprite's audit row is explicitly marked `approved_for_rendering`, and refuses text that cannot fit within the original trimmed atlas rectangle. No untranslated/unreviewed skill is automatically assigned a guessed name.
 - **Regression tests:** Added `tools/test_atlas_layout.py` with synthetic rotated/nonrotated legacy and modern round-trip cases, plus out-of-bounds rejection. The tests are authored but have not yet been executed against a checked-out copy of the branch.
 
+### First five original Chinese skill labels reviewed (Asuma)
+
+- Isolated and visually inspected `Record2.png` frames `Asuma_label1.png` through `Asuma_label5.png`, including original Chinese text.
+- Recorded Chinese transcriptions and proposed English translations in `Doc/ENGLISH_SPRITE_AUDIT.csv` with status **`proposed_for_review`** — these are NOT approved for rendering or committed atlas replacements.
+- Canon-recognizable roots: Wind Style: Whirlwind Fist, Flying Swallow, and Fire Style: Burning Ash. The precise modifiers for `翠岚烈斩`, `飞燕空穿`, and `狼牙伐锥` are either distinct from known established technique names or game-specific; do not silently map them to a different official jutsu.
+- Generated English comparison artwork is a **mockup**, not proof that text fits the original tiny 17–18px-high frames. Rendering requires reflow or increasing sprite frame space with proper plist changes; the strict repacker deliberately rejects overflow.
+
 ### Phase 2: image-bearing UI assets
 
 - [ ] Inspect actual rendered contents of `Menu.png`, `Select.png`, `UI.png`, `Result.png`, `NamePlate.png`, and `GameMode/*.png` to distinguish pictograms from Chinese text.
