@@ -58,7 +58,15 @@ python3 tools/repack_english_sprites.py --replacements english-sprite-audit \
     --output english-repacked-atlases
 ```
 
-**Blocker for image translation:** The connected repository reader exposed text and atlas metadata, but not binary PNG contents. The sprite art has **not** been visually inspected or replaced in the checked-in game resources. The export utility can run in a checkout with the assets; generated English artwork must be verified and imported separately. No game build or smoke test has run.
+**Graphic audit update:** Binary PNGs can be visually inspected through GitHub file reads with base64 encoding, even though a local checkout remains preferable for pixel-level editing. `Menu.png`, `Result.png`, `Record2.png` and the eight `GameMode/*.png` buttons have been viewed. **All eight mode buttons are already English** and must remain unchanged. The `Record2` atlas visibly contains Chinese skill descriptions, which require a per-sprite manga-terminology review. Some larger PNG responses are unavailable, and no original atlas PNG has been modified or committed. A game build and smoke test have **not** run.
+
+### Follow-up audit and implementation (2026-11-06)
+
+- **Actual raster inspection:** `GameMode/1.png` through `8.png` were individually inspected; they contain English labels. `Menu.png` mixes English UI and Chinese attribution. `Result.png` mixes mostly English interface art with Chinese text. `Record2.png` contains many Chinese character-skill descriptions. Do not indiscriminately regenerate pre-existing English graphics.
+- **Visible Credits screen:** `CreditsLayer.cpp` now displays the existing English attribution artwork (`credits02.png`) centered instead of displaying both English and Chinese versions. The original Chinese attribution (`credits01.png`) is preserved in source resources, not deleted.
+- **Concrete inventory:** `Doc/ENGLISH_SPRITE_AUDIT.csv` has 485 entries for the eight mode buttons and the Menu/Select/Result/Record2 atlases. Classifications distinguish images confirmed by visual inspection from metadata-only candidates. These entries are an audit backlog, **not 485 verified translations**.
+- **TexturePacker format fix:** Most project sprite atlases use `textureRect/spriteSourceSize/spriteOffset`, whereas `Menu` and `NamePlate` use `frame/sourceColorRect/sourceSize`. Added shared `tools/atlas_layout.py` and updated both extraction/repacking tools to support the two layouts, including rotated and trimmed frames. A metadata consistency scan found no size mismatches among 884 modern-format frame entries.
+- **Regression tests:** Added `tools/test_atlas_layout.py` with synthetic rotated/nonrotated legacy and modern round-trip cases, plus out-of-bounds rejection. The tests are authored but have not yet been executed against a checked-out copy of the branch.
 
 ### Phase 2: image-bearing UI assets
 
