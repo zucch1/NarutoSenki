@@ -17,19 +17,14 @@ from __future__ import annotations
 
 import argparse
 import plistlib
-import re
 from pathlib import Path
 
 from PIL import Image
 
+from atlas_layout import parse_frame
+
 ATLAS_NAMES = ("Menu", "Select", "UI", "Result", "Record", "Record2", "Report", "NamePlate")
 
-
-def numbers(value: str, count: int) -> tuple[int, ...]:
-    match = [int(n) for n in re.findall(r"-?\d+", value)]
-    if len(match) != count:
-        raise ValueError(f"Invalid TexturePacker size/rectangle: {value!r}")
-    return tuple(match)
 
 
 def process(resources: Path, replacements: Path, output: Path, atlas_name: str) -> int:
@@ -46,34 +41,34 @@ def process(resources: Path, replacements: Path, output: Path, atlas_name: str) 
         name = replacement.name
         if name not in frames:
             raise ValueError(f"{atlas_name}: unknown frame {name}")
-        info = frames[name]
-        x, y, w, h = numbers(info["frame"], 4)
-        sx, sy, sw, sh = numbers(info["sourceColorRect"], 4)
-        source_w, source_h = numbers(info["sourceSize"], 2)
+        geom = parse_frame(frames[name])
+        geom.validate(atlas.size)
         with Image.open(replacement) as image:
             edited = image.convert("RGBA")
-        if edited.size != (source_w, source_h):
+        if edited.size != (geom.source_width, geom.source_height):
             raise ValueError(
-                f"{atlas_name}/{name}: expected size {(source_w, source_h)}, got {edited.size}"
+                f"{atlas_name}/{name}: expected size "
+                f"{(geom.source_width, geom.source_height)}, got {edited.size}"
             )
         bbox = edited.getchannel("A").getbbox()
-        if bbox and (bbox[0] < sx or bbox[1] < sy or
-                     bbox[2] > sx + sw or bbox[3] > sy + sh):
+        if bbox and (bbox[0] < geom.trim_x or bbox[1] < geom.trim_y or
+                     bbox[2] > geom.trim_x + geom.trim_width or
+                     bbox[3] > geom.trim_y + geom.trim_height):
             raise ValueError(
                 f"{atlas_name}/{name}: new text exceeds the original atlas trim region"
             )
-        trimmed = edited.crop((sx, sy, sx + sw, sy + sh))
-        rotated = bool(info.get("rotated", False))
-        pixels = trimmed.rotate(-90, expand=True) if rotated else trimmed
-        expected = (h, w) if rotated else (w, h)
-        if pixels.size != expected:
+        trimmed = edited.crop((
+            geom.trim_x, geom.trim_y,
+            geom.trim_x + geom.trim_width, geom.trim_y + geom.trim_height
+        ))
+        pixels = trimmed.rotate(-90, expand=True) if geom.rotated else trimmed
+        if pixels.size != geom.packed_size:
             raise ValueError(
-                f"{atlas_name}/{name}: packed dimensions {pixels.size} != {expected}"
+                f"{atlas_name}/{name}: packed dimensions "
+                f"{pixels.size} != {geom.packed_size}"
             )
-        if x < 0 or y < 0 or x + pixels.width > atlas.width or y + pixels.height > atlas.height:
-            raise ValueError(f"{atlas_name}/{name}: rectangle exceeds atlas bounds")
         # RGBA paste without a mask replaces the original pixels including alpha.
-        atlas.paste(pixels, (x, y))
+        atlas.paste(pixels, (geom.x, geom.y))
         changed += 1
 
     if changed:
