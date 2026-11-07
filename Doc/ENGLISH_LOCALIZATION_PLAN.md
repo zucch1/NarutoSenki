@@ -53,8 +53,11 @@ The README is already available in English. This is a game UI localization proje
 ```bash
 python3 -m pip install Pillow
 python3 tools/export_text_sprites.py --output english-sprite-audit
-# Edit only reviewed frames under english-sprite-audit/<Atlas>/<Frame>.png.
-python3 tools/repack_english_sprites.py --replacements english-sprite-audit \
+# Identify each original sprite and record its checked English in
+# Doc/ENGLISH_SPRITE_AUDIT.csv; mark only verified entries as approved_for_rendering.
+python3 tools/render_english_sprite_text.py \
+    --manifest Doc/ENGLISH_SPRITE_AUDIT.csv --output english-generated-sprites
+python3 tools/repack_english_sprites.py --replacements english-generated-sprites \
     --output english-repacked-atlases
 ```
 
@@ -66,6 +69,7 @@ python3 tools/repack_english_sprites.py --replacements english-sprite-audit \
 - **Visible Credits screen:** `CreditsLayer.cpp` now displays the existing English attribution artwork (`credits02.png`) centered instead of displaying both English and Chinese versions. The original Chinese attribution (`credits01.png`) is preserved in source resources, not deleted.
 - **Concrete inventory:** `Doc/ENGLISH_SPRITE_AUDIT.csv` has 485 entries for the eight mode buttons and the Menu/Select/Result/Record2 atlases. Classifications distinguish images confirmed by visual inspection from metadata-only candidates. These entries are an audit backlog, **not 485 verified translations**.
 - **TexturePacker format fix:** Most project sprite atlases use `textureRect/spriteSourceSize/spriteOffset`, whereas `Menu` and `NamePlate` use `frame/sourceColorRect/sourceSize`. Added shared `tools/atlas_layout.py` and updated both extraction/repacking tools to support the two layouts, including rotated and trimmed frames. A metadata consistency scan found no size mismatches among 884 modern-format frame entries.
+- **Raster text generation:** Added `tools/render_english_sprite_text.py`. It generates a transparent, original-size English PNG only when the sprite's audit row is explicitly marked `approved_for_rendering`, and refuses text that cannot fit within the original trimmed atlas rectangle. No untranslated/unreviewed skill is automatically assigned a guessed name.
 - **Regression tests:** Added `tools/test_atlas_layout.py` with synthetic rotated/nonrotated legacy and modern round-trip cases, plus out-of-bounds rejection. The tests are authored but have not yet been executed against a checked-out copy of the branch.
 
 ### Phase 2: image-bearing UI assets
