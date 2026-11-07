@@ -6,6 +6,8 @@
 
 English (includes **Linux, Windows, Android, macOS** build steps): **[Doc/README.md](Doc/README.md)**
 
+Languages: **English** and **中文**. Switch with the EN | 中文 button on the main menu. Translators: see [tools/i18n/README.md](tools/i18n/README.md).
+
 [简体中文](Doc/README_ZH.md)
 
 ## Download

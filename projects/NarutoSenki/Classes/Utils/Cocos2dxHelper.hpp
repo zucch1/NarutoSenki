@@ -2,6 +2,7 @@
 #include "cocos2d.h"
 #include "../../../scripting/lua/cocos2dx_support/CCLuaEngine.h"
 #include "Utils/CCDeprecated.h"
+#include "Utils/Lang.hpp"
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC
 #include <format>
@@ -110,10 +111,13 @@ static inline bool callGlobalNoArgs(const char *funcName, const char *context = 
 static inline void addSprites(const string &plistName)
 {
 	SpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile(plistName.c_str());
+	// English mode: swap in the translated frames (Resources/Lang/en/<plist>)
+	Lang::applyOverride(plistName);
 }
 
 static inline void removeSprites(const string &plistName)
 {
+	Lang::removeOverride(plistName);
 	SpriteFrameCache::sharedSpriteFrameCache()->removeSpriteFramesFromFile(plistName.c_str());
 }
 

@@ -25,6 +25,7 @@ ns = {}
 -- Load utils
 require 'utils.hook'
 require 'utils.event'
+require 'utils.lang'
 require 'utils.utils'
 require 'utils.save'
 require 'utils.math'

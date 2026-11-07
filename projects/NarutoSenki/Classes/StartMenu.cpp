@@ -357,6 +357,14 @@ bool StartMenu::init()
 	menu2->setPosition(winSize.width - 15, winSize.height - 50);
 	addChild(menu2, 5);
 
+	// Language switch (EN | 中文), top-right corner
+	addSprites("Lang/LangButton.plist");
+	auto lang_btn = MenuItemSprite::create(Sprite::createWithSpriteFrameName(Lang::isEnglish() ? "lang_btn_en.png" : "lang_btn_zh.png"), nullptr, this, menu_selector(StartMenu::onLangBtn));
+	lang_btn->setAnchorPoint(Vec2(1, 1));
+	Menu *langMenu = Menu::create(lang_btn, nullptr);
+	langMenu->setPosition(winSize.width - 4, winSize.height - 4);
+	addChild(langMenu, 5);
+
 	scheduleUpdate();
 
 	return true;
@@ -379,6 +387,17 @@ void StartMenu::onExit()
 	Layer::onExit();
 	// Keep audio engine alive across scene transitions (e.g. Credits),
 	// otherwise newly started BGM can be cut off when StartMenu exits.
+}
+
+void StartMenu::onLangBtn(Ref *sender)
+{
+	SimpleAudioEngine::sharedEngine()->playEffect("Audio/Menu/confirm.ogg");
+	Lang::toggle();
+
+	// Rebuild the menu so every sprite picks up the other language
+	auto menuScene = Scene::create();
+	menuScene->addChild(StartMenu::create());
+	Director::sharedDirector()->replaceScene(TransitionFade::create(0.5f, menuScene));
 }
 
 void StartMenu::onLoginBtn(Ref *sender)
@@ -422,10 +441,9 @@ void StartMenu::setNotice()
 		stencil->setAnchorPoint(Vec2(0, 0));
 		clipper->setStencil(stencil);
 
-		auto strings = CCDictionary::createWithContentsOfFile("Config/strings.xml");
-		auto reply = ((CCString *)strings->objectForKey("Notice"))->m_sString.c_str();
+		auto reply = Lang::str("Notice");
 
-		noticeLabel = CCLabelTTF::create(reply, FONT_NAME, 12);
+		noticeLabel = CCLabelTTF::create(reply.c_str(), FONT_NAME, 12);
 		noticeLabel->setAnchorPoint(Vec2(0, 0));
 		clipper->addChild(noticeLabel);
 		clipper->setPosition(Vec2(35, 228));
