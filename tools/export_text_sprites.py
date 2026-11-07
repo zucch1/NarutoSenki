@@ -16,10 +16,11 @@ from __future__ import annotations
 import argparse
 import csv
 import plistlib
-import re
 from pathlib import Path
 
 from PIL import Image
+
+from atlas_layout import parse_frame
 
 ATLAS_NAMES = ("Menu", "Select", "UI", "Result", "Record", "Record2", "Report", "NamePlate")
 # Heuristic only: a name implies a *possible* text asset, not proof of Chinese text.
@@ -28,19 +29,6 @@ TEXT_MARKERS = ("text", "font", "title", "label", "tips", "notice", "loading",
                 "surrender", "result_defeat", "com_label", "change_btn",
                 "yes_btn", "no_btn", "ranking_btn", "skill_btn")
 
-
-def bounds(value: str) -> tuple[int, int, int, int]:
-    numbers = [int(v) for v in re.findall(r"-?\d+", value)]
-    if len(numbers) != 4:
-        raise ValueError(f"Invalid TexturePacker rectangle: {value!r}")
-    return tuple(numbers)
-
-
-def size(value: str) -> tuple[int, int]:
-    numbers = [int(v) for v in re.findall(r"-?\d+", value)]
-    if len(numbers) != 2:
-        raise ValueError(f"Invalid sourceSize: {value!r}")
-    return tuple(numbers)
 
 
 def export_atlas(resources: Path, name: str, output: Path, include_all: bool) -> list[dict]:
@@ -58,34 +46,28 @@ def export_atlas(resources: Path, name: str, output: Path, include_all: bool) ->
         if not (include_all or candidate):
             continue
 
-        x, y, w, h = bounds(info["frame"])
-        rotated = bool(info.get("rotated", False))
-        # TexturePacker stores 90-degree rotated sprite pixels as h-by-w.
-        region_w, region_h = (h, w) if rotated else (w, h)
-        if x < 0 or y < 0 or x + region_w > atlas.width or y + region_h > atlas.height:
-            raise ValueError(f"{name}/{sprite_name}: rectangle outside atlas")
-        sprite = atlas.crop((x, y, x + region_w, y + region_h))
-        if rotated:
+        geom = parse_frame(info)
+        geom.validate(atlas.size)
+        region_w, region_h = geom.packed_size
+        sprite = atlas.crop((geom.x, geom.y,
+                             geom.x + region_w, geom.y + region_h))
+        if geom.rotated:
             sprite = sprite.rotate(90, expand=True)
 
-        source_w, source_h = size(info["sourceSize"])
-        color_x, color_y, color_w, color_h = bounds(info["sourceColorRect"])
-        if sprite.size != (color_w, color_h):
+        if sprite.size != (geom.trim_width, geom.trim_height):
             raise ValueError(f"{name}/{sprite_name}: trimmed dimensions mismatch")
-        if color_x < 0 or color_y < 0 or color_x + color_w > source_w or color_y + color_h > source_h:
-            raise ValueError(f"{name}/{sprite_name}: sourceColorRect outside sourceSize")
 
-        full = Image.new("RGBA", (source_w, source_h))
-        full.alpha_composite(sprite, (color_x, color_y))
+        full = Image.new("RGBA", (geom.source_width, geom.source_height))
+        full.alpha_composite(sprite, (geom.trim_x, geom.trim_y))
         destination = output / name / sprite_name
         destination.parent.mkdir(parents=True, exist_ok=True)
         full.save(destination)
         rows.append({
             "atlas": name,
             "sprite": sprite_name,
-            "source_width": source_w,
-            "source_height": source_h,
-            "rotated": int(rotated),
+            "source_width": geom.source_width,
+            "source_height": geom.source_height,
+            "rotated": int(geom.rotated),
             "candidate_text": int(candidate),
             "export_path": str(destination.relative_to(output)),
             "observed_language": "",
