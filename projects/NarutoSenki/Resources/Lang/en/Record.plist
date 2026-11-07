@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>change_btn.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1,1},{55,21}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0,0},{55,21}}</string>
+			<key>sourceSize</key>
+			<string>{55,21}</string>
+		</dict>
+		<key>change_btn2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{58,1},{65,19}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0,0},{65,19}}</string>
+			<key>sourceSize</key>
+			<string>{65,19}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>realTextureFileName</key>
+		<string>Record.png</string>
+		<key>size</key>
+		<string>{256,23}</string>
+		<key>textureFileName</key>
+		<string>Record.png</string>
+	</dict>
+</dict>
+</plist>

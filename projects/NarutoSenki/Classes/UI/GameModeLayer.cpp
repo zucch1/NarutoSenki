@@ -116,8 +116,7 @@ void GameModeLayer::backToMenu(Ref *sender)
 void GameModeLayer::initModeData()
 {
 	// init mode text data
-	auto lang = Application::sharedApplication()->getCurrentLanguage();
-	if (lang == LanguageType::kLanguageChinese)
+	if (Lang::isChinese())
 	{
 		modes[GameMode::OneVsOne] = {"1 VS 1", ""};
 		modes[GameMode::Classic] = {"3 VS 3", "经典模式"};
@@ -133,8 +132,8 @@ void GameModeLayer::initModeData()
 		modes[GameMode::OneVsOne] = {"1 VS 1", ""};
 		modes[GameMode::Classic] = {"3 VS 3", "Classic Mode"};
 		modes[GameMode::FourVsFour] = {"4 VS 4", ""};
-		modes[GameMode::HardCore_4Vs4] = {"HardCore (4 VS 4)", "Disabled gear"};
-		modes[GameMode::Boss] = {"Boss (3 VS 3)", ""};
+		modes[GameMode::HardCore_4Vs4] = {"Hardcore (4 VS 4)", "No gear"};
+		modes[GameMode::Boss] = {"Boss (3 VS 1)", ""};
 		modes[GameMode::Clone] = {"Clone (3 VS 3)", ""};
 		modes[GameMode::Deathmatch] = {"Deathmatch (3 VS 3)", ""};
 		modes[GameMode::RandomDeathmatch] = {"Random Deathmatch (3 VS 3)", ""};
@@ -150,7 +149,7 @@ void GameModeLayer::initModeData()
 	{
 		auto &data = modes.at(i);
 		if (data.isLocked)
-			data.description += " (In developtment)";
+			data.description += Lang::tr(" (In development)", " (开发中)");
 		// data.handler = s_ModeHandlers[i];
 	}
 }

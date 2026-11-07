@@ -66,6 +66,7 @@ public:
 
 	void onNewsBtn(Ref *sender);
 	void onLoginBtn(Ref *sender);
+	void onLangBtn(Ref *sender);
 
 	void scrollMenu(int posY);
 	Sprite *menuText;

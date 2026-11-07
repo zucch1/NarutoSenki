@@ -1,0 +1,60 @@
+# atlas	frame	style	zh (source text, reference)	en
+Gears	gearDetail_00.png	gear	速走忍鞋|短时间内提高角色的移动速度并隐身3s	Swift Sandals|Briefly boosts move speed and makes you invisible for 3s.
+Gears	gearDetail_01.png	gear	查克拉护腕|提升角色25%额外的查克拉获取	Chakra Bracer|Gain 25% extra chakra.
+Gears	gearDetail_02.png	gear	查克拉手里剑|每攻击一名敌人将获得15%的查克拉加成【对守护忍有效】	Chakra Shuriken|Each enemy you hit gives a 15% chakra bonus. [Works on Guardians]
+Gears	gearDetail_03.png	gear	忍具陷阱|释放一个苦无陷阱，触发后将击倒敌人并造成伤害	Kunai Trap|Sets a kunai trap that knocks down and damages whoever triggers it.
+Gears	gearDetail_04.png	gear	兵粮丸|普通攻击追加破防效果，并提升伤害	Soldier Pill|Normal attacks break defenses and deal more damage.
+Gears	gearDetail_05.png	gear	忍术大全|减少普通技能的冷却时间，并提高所有攻击的暴击率及暴击伤害	Jutsu Scroll|Shorter skill cooldowns, plus higher crit rate and crit damage on all attacks.
+Gears	gearDetail_06.png	gear	替身术|立即从伤害状态中恢复并进入隐身状态1.5s	Substitution|Instantly recover from hitstun and turn invisible for 1.5s.
+Gears	gearDetail_07.png	gear	特制饭团|提高使用拉面的回血量	Special Rice Ball|Ramen heals more HP.
+Gears	gearDetail_08.png	gear	锁链忍铠|提高角色6000 HP上限并减少25%所收到的伤害	Chain Mail|+6000 max HP and 25% less damage taken.
+Menu	menu01_text.png	menutext	联网模式【前往官网社区Forums注册账号和更多玩家参与排行】	Online Mode [Register on the official Forums to join the rankings with more players]
+Menu	menu02_text.png	menutext	练习模式	Training
+Menu	menu03_text.png	menutext	退出游戏	Exit Game
+Menu	menu04_text.png	menutext	制作团队	Credits
+Menu	btm_text.png	line	Quit and return to the main menu. / 退出并且回到主菜单。	Quit and return to the main menu.
+Menu	surrender_text.png	line	Are your sure you want to surrender? / 您是否决定投降？	Are you sure you want to surrender?
+Menu	credits01.png	credits	本游戏出于非商业用途制作，游戏中使用的图片、音频等素材的版权均归各代内容公司及相关网络制作者所有，如果有任何问题或者建议请联系我们。	This game was made for non-commercial use. All images, audio and other assets belong to their respective copyright holders and creators. If you have any problems or suggestions, please contact us.
+Result	surrender_tips.png	smalltext	超过15分钟投降将进行技术计分	Surrender after 15 min to still get a performance score
+Select	tip1.png	tip	非法复制及恶意修改等行为将严重危及一款同人游戏的寿命!	Piracy and malicious modding can kill a fan game. Please don't!
+Select	tip2.png	tip	独立开发免费游戏只能借助广告来维持，请不要屏蔽它	This free indie game survives on ads. Please don't block them.
+Select	tip3.png	tip	更多游戏情报，请访问我们官网【www.zakume.net】	For more game news, visit our official site [www.zakume.net]
+Record	change_btn.png	awaken	觉醒可能	AWAKEN
+Record	change_btn2.png	awaken	二次觉醒	AWAKEN II
+Ougis	gameStart_00*.png	gamestart	戰鬥開始	BATTLE START!
+Select	Asuma_font.png	plate	猿飛阿斯瑪 SARUTOBI ASUMA	ASUMA|ASUMA SARUTOBI
+Select	Chiyo_font.png	plate	千代婆婆 CHIYO BAA	CHIYO|GRANNY CHIYO
+Select	Choji_font.png	plate	秋道丁次 AKIMICHI CHOJI	CHOJI|CHOJI AKIMICHI
+Select	Deidara_font.png	plate	迪達拉 DEIDARA	DEIDARA|
+Select	Gaara_font.png	plate	我愛羅 GAARA	GAARA|
+Select	Hidan_font.png	plate	飛段 HIDAN	HIDAN|
+Select	Hinata_font.png	plate	日向雛田 HYUGA HINATA	HINATA|HINATA HYUGA
+Select	Hiruzen_font.png	plate	猿飛日斬 SARUTOBI HIRUZEN	HIRUZEN|HIRUZEN SARUTOBI
+Select	Ino_font.png	plate	山中井野 YAMANAKA INO	INO|INO YAMANAKA
+Select	Itachi_font.png	plate	宇智波鼬 UCHIHA ITACHI	ITACHI|ITACHI UCHIHA
+Select	Jiraiya_font.png	plate	自來也 JIRAIYA	JIRAIYA|
+Select	Jugo_font.png	plate	天秤重吾 TENBIN JUGO	JUGO|
+Select	Kakashi_font.png	plate	旗木卡卡西 HATAKE KAKASHI	KAKASHI|KAKASHI HATAKE
+Select	Kakuzu_font.png	plate	角都 KAKUZU	KAKUZU|
+Select	Kankuro_font.png	plate	勘九郎 KANKURO	KANKURO|
+Select	Karin_font.png	plate	漩渦香燐 UZUMAKI KARIN	KARIN|KARIN UZUMAKI
+Select	Kiba_font.png	plate	犬冢牙小肉 INUZUKA KIBA	KIBA|KIBA INUZUKA
+Select	Kimimaro_font.png	plate	君麻呂 KIMIMARO	KIMIMARO|
+Select	Kisame_font.png	plate	干柿鬼鮫 HOSHIGAKI KISAME	KISAME|KISAME HOSHIGAKI
+Select	Konan_font.png	plate	小南 KONAN	KONAN|
+Select	Lee_font.png	plate	李洛克 ROCK LEE	ROCK LEE|
+Select	Minato_font.png	plate	波風水門 NAMIKAZE MINATO	MINATO|MINATO NAMIKAZE
+Select	Naruto_font.png	plate	漩渦鳴人 UZUMAKI NARUTO	NARUTO|NARUTO UZUMAKI
+Select	Neji_font.png	plate	日向寧次 HYUGA NEJI	NEJI|NEJI HYUGA
+Select	Orochimaru_font.png	plate	大蛇丸 OROCHIMARU	OROCHIMARU|
+Select	Pain_font.png	plate	佩恩 PAIN	PAIN|
+Select	Sai_font.png	plate	佐井 SAI	SAI|
+Select	Sakura_font.png	plate	春野櫻 HARUNO SAKURA	SAKURA|SAKURA HARUNO
+Select	Sasuke_font.png	plate	宇智波佐助 UCHIHA SASUKE	SASUKE|SASUKE UCHIHA
+Select	Shikamaru_font.png	plate	奈良鹿丸 NARA SHIKAMARU	SHIKAMARU|SHIKAMARU NARA
+Select	Shino_font.png	plate	油女志乃 ABURAME SHINO	SHINO|SHINO ABURAME
+Select	Suigetsu_font.png	plate	鬼燈水月 HOHZUKI SUIGETSU	SUIGETSU|SUIGETSU HOZUKI
+Select	Tenten_font.png	plate	天天 TENTEN	TENTEN|
+Select	Tobi_font.png	plate	阿飛 TOBI	TOBI|
+Select	Tobirama_font.png	plate	千手扉間 SENJU TOBIRAMA	TOBIRAMA|TOBIRAMA SENJU
+Select	Tsunade_font.png	plate	千手綱手 SENJU TSUNADE	TSUNADE|TSUNADE SENJU

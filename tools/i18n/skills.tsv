@@ -1,0 +1,208 @@
+# frame	Chinese source (transcribed from the original Record2 art)	English
+Asuma_label1	旋风拳:造成前方硬直性忍术伤害	Whirlwind Fist: Deals staggering ninjutsu damage in front.
+Asuma_label2	翠岚烈斩:突进并造成范围硬直性忍术伤害	Emerald Gale Slash: Dashes forward and deals staggering area ninjutsu damage.
+Asuma_label3	飞燕空穿:阿斯玛将查克拉注入拳刃之中，对前方敌人进行追击	Flying Swallow Pierce: Asuma flows chakra into his trench knives and chases down enemies in front.
+Asuma_label4	狼牙伐锯:奥义以查克拉刀乱斩所有靠近的敌人，造成连击伤害	Wolf Fang Saw: Ultimate. Slashes wildly at every nearby enemy with chakra blades, dealing combo damage.
+Asuma_label5	火遁·灰烬烧:奥义2吐出烟灰云并引燃后续对敌人造成数秒灼烧伤害	Fire Style: Burning Ash: Ultimate 2. Exhales a cloud of ash and ignites it, burning enemies for several seconds.
+Chiyo_label1	傀儡·父与母:召唤傀儡父母，期间傀儡如果在婆婆身边并处于未攻击状态，则婆婆获得霸体及减伤效果	Puppet: Mother and Father: Summons the Mother and Father puppets. While a puppet is beside Chiyo and not attacking, she gains super armor and damage reduction.
+Chiyo_label2	傀儡术·操术琥珀:操纵傀儡父母造成范围忍术伤害	Puppet Technique: Amber Puppetry: Mother and Father unleash an area ninjutsu attack.
+Chiyo_label3	操演·一心同体:操纵傀儡父母封印对面一名敌人的行动	Puppet Play: Two Bodies, One Heart: Mother and Father seal the movement of one enemy in front.
+Chiyo_label4	禁术·己生转生:奥义一段时间内千代婆婆将查克拉分给队友，并使附近的友军进入霸体状态	Forbidden Jutsu: One's Own Life Reincarnation: Ultimate. For a time, Granny Chiyo shares her chakra with her allies and grants nearby allies super armor.
+Chiyo_label5	白秘技·近松十人众:奥义2召唤被称为“十指之数”的初代傀儡师杰作近松十人众造成范围忍术伤害	White Secret Technique: Chikamatsu's Ten Puppets: Ultimate 2. Summons the Ten Puppets of Chikamatsu, the first puppet master's masterpieces, for area ninjutsu damage.
+Choji_label1	家族秘药:短时间内提升忍术伤害	Akimichi Secret Pills: Boosts ninjutsu damage for a short time.
+Choji_label2	肉弹战车:突进并造成范围忍术伤害	Human Bullet Tank: Rolls forward, dealing area ninjutsu damage.
+Choji_label3	超倍化之术:变大并造成范围伤害	Super Expansion Jutsu: Grows gigantic and deals area damage.
+Choji_label4	超推手:奥义变大并造成范围伤害	Super Open-Hand Slap: Ultimate. Grows gigantic and deals area damage.
+Choji_label5	蝶化之术:奥义2一定时间内大幅提高普通攻击的伤害【塔有效】	Butterfly Mode: Ultimate 2. Greatly increases normal attack damage for a time. [Works on towers]
+Deidara_label1	起爆黏土·飞鸟:一段时间内替换体术攻击为召唤带追击特性的起爆黏土	Explosive Clay: Birds: For a time, replaces normal attacks with homing explosive clay birds.
+Deidara_label2	自爆黏土·蜈蚣:一段时间内召唤出属性等级与迪达拉相同的蜈蚣	Explosive Clay: Centipede: Summons a centipede with the same stats and level as Deidara for a time.
+Deidara_label3	自爆黏土分身:短时间内隐身并造成大范围伤害	Exploding Clay Clone: Turns invisible briefly, then deals wide-area damage.
+Deidara_label4	艺术十八番:骑乘飞鸟并在移动过程中持续释放C1	Signature Art: Rides a clay bird and keeps dropping C1 as it flies.
+Deidara_label5	CO·自爆:奥义2究极自爆后死亡【塔有效】	C0: Ultimate Art: Ultimate 2. Deidara blows himself up and dies. [Works on towers]
+Gaara_label1	守鹤之力:利用砂之手造成控制性伤害	Shukaku's Power: Strikes with a sand hand, dealing crowd-control damage.
+Gaara_label2	砂之手:于敌方附近召唤砂之手造成范围忍术伤害	Sand Hand: Summons a sand hand near enemies, dealing area ninjutsu damage.
+Gaara_label3	砂缚柩:将敌方困于沙中并造成范围伤害	Sand Coffin: Traps enemies in sand and deals area damage.
+Gaara_label4	砂瀑送葬:奥义造成范围伤害并禁锢敌方	Sand Waterfall Funeral: Ultimate. Deals area damage and immobilizes enemies.
+Gaara_label5	风影模式:奥义2一段时间内进入风影模式并释放流砂瀑流	Kazekage Mode: Ultimate 2. Enters Kazekage Mode for a time and unleashes Quicksand Waterfall Flow.
+Hidan_label1	诅咒仪式:画个圈圈诅咒敌方所有忍者	Cursing Ritual: Draws a circle to curse every enemy ninja.
+Hidan_label2	漆黑长矛:对前方造成小幅度穿透伤害	Black Spear: Deals light piercing damage in front.
+Hidan_label3	血腥乱舞:飞段高速操纵大镰刀并造成范围伤害	Bloody Frenzy: Hidan whirls his giant scythe at high speed, dealing area damage.
+Hidan_label4	血腥三月镰:奥义挥动镰刀将敌人拖到身边并造成伤害	Bloody Triple-Bladed Scythe: Ultimate. Swings the scythe to drag enemies to Hidan and damage them.
+Hidan_label5	咒术·死司凭血:奥义2飞段进入咒术模式,期间处在仪式范围内反弹所有伤害(敌方队友亦需承担一半的伤害)	Curse Jutsu: Death Controlling Possessed Blood: Ultimate 2. Hidan enters Curse Mode. While in his ritual circle he reflects all damage (the enemy's teammates also take half of it).
+Hinata_label1	白眼:短时间内提升忍术伤害，期间雏田造成的伤害不会增加对方奥义技能的查克拉	Byakugan: Boosts ninjutsu damage for a short time. Meanwhile, Hinata's hits don't build the enemy's chakra for ultimates.
+Hinata_label2	破山拳:前方小范围忍术伤害并击飞敌人	Mountain Crusher Fist: Small-area ninjutsu damage in front that knocks enemies away.
+Hinata_label3	柔拳法·八卦三十二掌:前方控制性忍术伤害	Gentle Fist Art: Eight Trigrams Thirty-Two Palms: Crowd-control ninjutsu damage in front.
+Hinata_label4	柔拳法·白胧天舞:奥义并造成范围控制性伤害	Gentle Fist Art: White Haze Heavenly Dance: Ultimate. Deals area crowd-control damage.
+Hinata_label5	柔步双狮拳:奥义2形态化查克拉进行持续打击	Gentle Step: Twin Lion Fists: Ultimate 2. Shapes chakra into lions for a flurry of strikes.
+Hiruzen_label1	土遁·土流壁:在前方召唤一座土壁，伤害附近的敌人	Earth Style: Earth Flow Rampart: Raises an earth wall in front that damages nearby enemies.
+Hiruzen_label2	手里剑·影分身之术EX:召唤出多个带轨迹伤害的高速巨型手里剑	Shuriken Shadow Clone Jutsu EX: Launches several high-speed giant shuriken that damage everything in their path.
+Hiruzen_label3	口寄·金刚如意棒:召唤出能够变化成猿魔的金箍棒	Summoning: Adamantine Staff: Summons the Adamantine Staff, which can transform into Enma, the Monkey King.
+Hiruzen_label4	土流三连蹴:奥义连击并造成范围忍术伤害	Earth Flow Triple Kick: Ultimate. A combo dealing area ninjutsu damage.
+Hiruzen_label5	禁术·尸骨封禁:奥义2召唤死神造成的伤害将无视对方防御及无敌状态	Forbidden Jutsu: Reaper Death Seal: Ultimate 2. Calls the Death God, whose damage ignores defense and invincibility.
+ImmortalSasuke_label1	千鸟刀EX:突进并造成硬直性忍术伤害	Chidori Blade EX: Dashes in, dealing staggering ninjutsu damage.
+ImmortalSasuke_label2	千鸟锐枪:造成前方中距离硬直性忍术伤害	Chidori Sharp Spear: Deals staggering ninjutsu damage at mid-range in front.
+ImmortalSasuke_label3	装遁EX:嘲讽敌人并使用加具土命进行反击	Feint Style EX: Taunts enemies, then counterattacks with Kagutsuchi.
+ImmortalSasuke_label4	天照EX:奥义召唤黑炎并随机击倒最近的敌人	Amaterasu EX: Ultimate. Calls black flames that knock down the nearest enemies at random.
+ImmortalSasuke_label5	须佐之男:奥义2召唤须佐能乎进行大范围打击	Susanoo: Ultimate 2. Summons Susanoo for a wide-area attack.
+Ino_label1	野猪飞踢:突进并造成范围控制性伤害	Wild Boar Flying Kick: Dashes in, dealing area crowd-control damage.
+Ino_label2	鸟兜落:向前方跃起并击倒附近的敌人	Aconite Drop: Leaps forward and knocks down nearby enemies.
+Ino_label3	蝶舞:舞蹈般对前方进行一系列连击	Butterfly Dance: A dance-like flurry of strikes in front.
+Ino_label4	幻术·蝶燐:奥义使用幻术让敌人陷入花蝶的攻击	Genjutsu: Butterfly Glimmer: Ultimate. Traps enemies in a genjutsu where flowers and butterflies attack them.
+Ino_label5	心转身之术:奥义2持续控制对方,期间造成的杀敌奖励由井野获得	Mind Body Switch Jutsu: Ultimate 2. Takes control of an enemy. Any kill rewards earned meanwhile go to Ino.
+Itachi_label1	鸦身之术:突进并造成小范围忍术伤害	Crow Clone Jutsu: Dashes in, dealing small-area ninjutsu damage.
+Itachi_label2	火遁·豪火球之术:前方小范围忍术伤害	Fire Style: Fireball Jutsu: Small-area ninjutsu damage in front.
+Itachi_label3	天照:召唤出黑炎，对踩踏黑炎者持续伤害	Amaterasu: Calls black flames that keep burning anyone who steps in them.
+Itachi_label4	月读:使用幻术禁锢敌人，并持续造成范围忍术伤害	Tsukuyomi: Binds enemies in genjutsu and deals continuous area ninjutsu damage.
+Itachi_label5	须佐之男:奥义2召唤须佐能乎进行大范围打击	Susanoo: Ultimate 2. Summons Susanoo for a wide-area attack.
+Jiraiya_label1	忍法·针地藏:小范围忍术伤害	Ninja Art: Needle Jizo: Small-area ninjutsu damage.
+Jiraiya_label2	口寄·摊贩压垮术:通灵妙木山青蛙造成伤害	Summoning: Food Cart Destroyer Jutsu: Summons a toad from Mount Myoboku to crush enemies.
+Jiraiya_label3	火遁·大炎弹:造成前方小范围控制性忍术伤害	Fire Style: Flame Bullet: Small-area crowd-control ninjutsu damage in front.
+Jiraiya_label4	豪炎螺旋丸:奥义突进并造成控制性忍术伤害	Great Flame Rasengan: Ultimate. Dashes in, dealing crowd-control ninjutsu damage.
+Jiraiya_label5	仙人模式:奥义2召唤二大仙人并进入仙人模式	Sage Mode: Ultimate 2. Summons the Two Great Sage Toads and enters Sage Mode.
+Jugo_label1	铜腕缚:突进并造成硬直性伤害	Bronze Arm Bind: Dashes in, dealing staggering damage.
+Jugo_label2	爆碎拳:突进并造成硬直忍术伤害	Shattering Fist: Dashes in, dealing staggering ninjutsu damage.
+Jugo_label3	斧斩爆碎拳:下次普通攻击将造成大量伤害并击倒对方	Axe-Chop Shattering Fist: Your next normal attack deals heavy damage and knocks the target down.
+Jugo_label4	咒印组手:奥义浮空击并造成一系列伤害	Cursed Seal Combat: Ultimate. Launches enemies into the air with a string of hits.
+Jugo_label5	地震炎:奥义2重吾释放杀意瞬间造成大范围忍术伤害	Quake Blast: Ultimate 2. Jugo unleashes his killing intent, instantly dealing wide-area ninjutsu damage.
+Kakashi_label1	千年杀:封印对方忍术并造成忍术伤害	One Thousand Years of Death: Seals the enemy's ninjutsu and deals ninjutsu damage.
+Kakashi_label2	土遁·帕克之术:对踩踏者造成忍术伤害	Earth Style: Tracking Fang: Deals ninjutsu damage to anyone who steps on it.
+Kakashi_label3	写轮眼模式:技能12替换并小幅度提升体术伤害	Sharingan Mode: Swaps out skills 1 and 2 and slightly boosts taijutsu damage.
+Kakashi_label4	土遁·土流壁EX:在前方召唤一座狗墙并一段时间内吸引攻击	Earth Style: Earth Flow Rampart EX: Raises a wall of ninja hounds in front that draws enemy attacks for a time.
+Kakashi_label5	神威双雷震:奥义2持续释放雷遁忍术并转移敌人到异空间	Kamui Lightning: Ultimate 2. Keeps unleashing Lightning Style ninjutsu and warps enemies into another dimension.
+Kakuzu_label1	角都理财:角都捡起附近的所有尸体以领取保金，如果是敌人的尸体则增加角都100HP上限及5点普通攻击伤害	Bounty Collector: Kakuzu collects every nearby body to claim the bounty. Each enemy body raises his max HP by 100 and his normal attack damage by 5.
+Kakuzu_label2	心脏夺取术:角都伸出触手抓住敌人，最后一下将夺取敌人的心脏【心脏的上限为5】	Heart Stealing Jutsu: Kakuzu's threads seize an enemy, and the final hit steals their heart. [Up to 5 hearts]
+Kakuzu_label3	土遁·硬化术:一段时间内减伤25%，并返还一半直接攻击造成的伤害给攻击者	Earth Style: Hardening Jutsu: For a time, takes 25% less damage and returns half of all direct-hit damage to the attacker.
+Kakuzu_label4	性质面具:奥义消耗1颗心脏召唤出三种和角都基础数值相同的面具小黑,	Elemental Masks: Ultimate. Spends 1 heart to summon three mask monsters with the same base stats as Kakuzu.
+Kakuzu_label5	秘术·地怨虞:奥义2消耗1颗心脏满血原地复活	Secret Jutsu: Earth Grudge Fear: Ultimate 2. Spends 1 heart to revive on the spot with full HP.
+Kankuro_label1	黑秘技·乌鸦:召唤傀儡木偶乌鸦	Black Secret Technique: Crow: Summons the puppet Crow.
+Kankuro_label2	黑秘技·主干六刀:操控乌鸦造成范围伤害	Black Secret Technique: Six Blades: Controls Crow to deal area damage.
+Kankuro_label3	黑秘技·黑蚁:召唤黑蚁并控制住一名敌人	Black Secret Technique: Black Ant: Summons Black Ant to trap one enemy.
+Kankuro_label4	黑秘技·山椒鱼:奥义召唤傀儡木偶山椒鱼	Black Secret Technique: Salamander: Ultimate. Summons the puppet Salamander.
+Kankuro_label5	赤秘技·蝎:奥义2召唤傀儡木偶赤砂之蝎	Red Secret Technique: Sasori: Ultimate 2. Summons the human puppet Sasori of the Red Sand.
+Karin_label1	色诱术:突进并造成范围硬直伤害	Seduction Jutsu: Dashes in, dealing staggering area damage.
+Karin_label2	神乐Beam:对前方造成硬直性忍术伤害	Kagura Beam: Deals staggering ninjutsu damage in front.
+Karin_label3	恶女制裁:突进并造成硬直忍术伤害	Bad Girl's Punishment: Dashes in, dealing staggering ninjutsu damage.
+Karin_label4	神乐之术:奥义一定时间内治愈附近友方及自身	Kagura Jutsu: Ultimate. Heals Karin and nearby allies for a time.
+Karin_label5	查克拉锁链:奥义2使用锁链造成持续打击	Chakra Chains: Ultimate 2. Lashes enemies again and again with chains.
+Kiba_label1	人兽分离:命令赤丸单独行动	Man-Beast Split: Sends Akamaru off to fight on his own.
+Kiba_label2	牙通牙:命令赤丸旋转身体对敌人造成范围伤害	Fang Over Fang: Akamaru spins into enemies, dealing area damage.
+Kiba_label3	四脚之术:短时间内大幅度提高普通攻击伤害和攻击速度	Four Legs Jutsu: Greatly boosts normal attack damage and attack speed for a short time.
+Kiba_label4	犬冢流·天双牙:奥义突进并击飞附近的敌人	Inuzuka Style: Twin Heavenly Fangs: Ultimate. Dashes in and knocks nearby enemies away.
+Kiba_label5	犬冢流·牙狼牙:奥义2突进并造成大范围忍术伤害	Inuzuka Style: Fang Wolf Fang: Ultimate 2. Dashes in, dealing wide-area ninjutsu damage.
+Kimimaro_label1	十指穿弹:前方小范围控制性伤害	Ten-Finger Drilling Bullets: Small-area crowd-control damage in front.
+Kimimaro_label2	椿之舞:投掷带轨迹伤害的骨刃	Dance of the Camellia: Throws a bone blade that damages everything in its path.
+Kimimaro_label3	柳之舞:前方控制性忍术伤害	Dance of the Willow: Crowd-control ninjutsu damage in front.
+Kimimaro_label4	铁线花之舞:奥义使用最强之矛突进并造成伤害	Dance of the Clematis: Flower: Ultimate. Charges with his strongest spear, dealing damage.
+Kimimaro_label5	早蕨之舞:奥义2大范围忍术伤害后退出战场	Dance of the Seedling Fern: Ultimate 2. Deals wide-area ninjutsu damage, then Kimimaro leaves the battlefield.
+Kisame_label1	水遁·水鲛弹之术:释放带轨迹伤害的鲨鱼	Water Style: Water Shark Bomb Jutsu: Fires a shark that damages everything in its path.
+Kisame_label2	水遁·五食鲛:前方中范围硬直忍术伤害	Water Style: Five Feeding Sharks: Staggering mid-area ninjutsu damage in front.
+Kisame_label3	鲛肌解放:下次普通攻击将附带65%的查克拉	Samehada Unleashed: Your next normal attack is infused with 65% chakra.
+Kisame_label4	水遁·暴水冲破:奥义前方大范围硬直忍术伤害	Water Style: Exploding Water Shockwave: Ultimate. Staggering wide-area ninjutsu damage in front.
+Kisame_label5	鲛肌·人体融合:奥义2前方大范围忍术伤害	Samehada Fusion: Ultimate 2. Wide-area ninjutsu damage in front.
+Konan_label1	折纸模式:一段时间内进入隐身状态	Origami Mode: Turns invisible for a time.
+Konan_label2	纸标枪:投出一个移动轨迹伤害的纸标枪	Paper Javelin: Throws a paper javelin that damages everything in its path.
+Konan_label3	纸手里剑:投出两个移动轨迹伤害的纸手里剑	Paper Shuriken: Throws two paper shuriken that damage everything in their path.
+Konan_label4	式纸之舞:奥义轨迹移动并造成范围忍术伤害	Dance of the Shikigami: Ultimate. Sweeps across the field, dealing area ninjutsu damage.
+Konan_label5	天使之纸雨:奥义2造成浮空并进行大范围伤害	Angel's Paper Rain: Ultimate 2. Launches enemies into the air with wide-area damage.
+Lee_label1	八门遁甲:解除身体对查克拉的限制，每开启一道经络之门将会不断提高自身的忍术伤害及速度	Eight Inner Gates: Releases the body's chakra limiters. Each gate opened further boosts his ninjutsu damage and speed.
+Lee_label2	木叶旋风:2段旋风踢造成硬直性体术伤害	Leaf Hurricane: A two-hit spinning kick dealing staggering taijutsu damage.
+Lee_label3	木叶烈风:对敌人的下盘进行连击，并击飞对手【需开启生门】	Leaf Gale: A combo of low kicks that knocks the enemy away. [Requires the Gate of Life]
+Lee_label4	表莲华:奥义将敌人踢至空中，并追加落地伤害【需开启开门】	Front Lotus: Ultimate. Kicks the enemy into the air and slams them into the ground. [Requires the Gate of Opening]
+Lee_label5	里莲华:奥义2将肉体提升到极限进而对敌人进行高速连击【需开启生门】	Hidden Lotus: Ultimate 2. Pushes his body to the limit for a high-speed combo. [Requires the Gate of Life]
+Minato_label1	?爱之剑:设置用于施展飞雷神之术的标记	Marked Kunai: Sets a marker for the Flying Thunder God Jutsu.
+Minato_label2	飞雷神二段:瞬移至苦无接触的第一人进行打击	Flying Thunder God: Second Step: Teleports to the first person the kunai touches and strikes them.
+Minato_label3	黄色闪光模式:一段时间内提高普通攻击并瞬移到敌方背后	Yellow Flash Mode: For a time, boosts normal attacks and teleports behind enemies.
+Minato_label4	疾风三连击:奥义连击并造成范围忍术伤害	Gale Triple Strike: Ultimate. A combo dealing area ninjutsu damage.
+Minato_label5	时空疾风闪光连段零式:奥义2投掷6把苦无连击并对前方范围造成大量忍术伤害	Space-Time Gale Flash Chain: Zero Style: Ultimate 2. Throws 6 kunai in a combo, dealing heavy ninjutsu damage to the area in front.
+Nagato_label1	外道轮回天生之术:立即复活所有死去的队友	Outer Path: Samsara of Heavenly Life Jutsu: Instantly revives every fallen teammate.
+Nagato_label2	外道轮回天生之术:立即复活所有死去的队友	Outer Path: Samsara of Heavenly Life Jutsu: Instantly revives every fallen teammate.
+Nagato_label3	神罗天征EX:大范围忍术伤害【塔有效】	Almighty Push EX: Wide-area ninjutsu damage. [Works on towers]
+Nagato_label4	地爆天星EX:奥义召唤复数带吸引效果的巨石	Planetary Devastation EX: Ultimate. Summons several boulders that pull enemies in.
+Nagato_label5	佩恩六道:奥义2召唤佩恩六道进行群体攻击	Six Paths of Pain: Ultimate 2. Summons the Six Paths of Pain for a group attack.
+Naruto_label1	螺旋丸:前方小范围控制性忍术伤害	Rasengan: Small-area crowd-control ninjutsu damage in front.
+Naruto_label2	影分身之术:召唤只使用体术攻击的分身	Shadow Clone Jutsu: Summons clones that fight with taijutsu only.
+Naruto_label3	风遁手里剑:前方中范围控制性忍术伤害	Wind Style: Shuriken: Crowd-control mid-area ninjutsu damage in front.
+Naruto_label4	漩涡鸣人连弹:击飞敌人并持续造成控制性忍术伤害	Uzumaki Barrage: Knocks enemies into the air and keeps hitting them with crowd-control ninjutsu damage.
+Naruto_label5	九尾之力:奥义2一段时间内进入九尾查克拉状态，之后切换至仙人模式	Nine-Tails' Power: Ultimate 2. Enters Nine-Tails Chakra Mode for a time, then switches to Sage Mode.
+Neji_label1	白眼:短时间内提升忍术伤害并进入霸体状态	Byakugan: Briefly boosts ninjutsu damage and grants super armor.
+Neji_label2	破山击:前方小范围硬直伤害	Mountain Crusher: Staggering small-area damage in front.
+Neji_label3	柔拳法·八卦六十四掌:前方控制性忍术伤害	Gentle Fist Art: Eight Trigrams Sixty-Four Palms: Crowd-control ninjutsu damage in front.
+Neji_label4	柔拳法·八卦掌回天:奥义范围控制性忍术伤害	Gentle Fist Art: Eight Trigrams Palm Rotation: Ultimate. Area crowd-control ninjutsu damage.
+Neji_label5	柔拳法·八卦空掌:奥义2连续打击并击飞敌人	Gentle Fist Art: Eight Trigrams Vacuum Palm: Ultimate 2. Rapid strikes that knock enemies away.
+Orochimaru_label1	草薙剑式:造成前方小幅度忍术伤害	Sword of Kusanagi: Deals light ninjutsu damage in front.
+Orochimaru_label2	猛蛇踏步:突进并造成范围控制性伤害	Fierce Snake Step: Dashes in, dealing area crowd-control damage.
+Orochimaru_label3	潜影蛇手:释放蛇群拖拉并击退敌人	Striking Shadow Snakes: Unleashes snakes that drag enemies and knock them back.
+Orochimaru_label4	八岐之术:奥义变成白蛇并回复全部生命	Eight Branches Jutsu: Ultimate. Becomes the great white snake and restores all HP.
+Orochimaru_label5	三重罗生门:奥义2召唤罗生门进行三重打击	Triple Rashomon: Ultimate 2. Summons the Rashomon gates for a triple strike.
+Pain_label1	轮回眼模式:短时间大幅度提升忍术伤害	Rinnegan Mode: Greatly boosts ninjutsu damage for a short time.
+Pain_label2	万象天引:吸引前方中距离敌人	Universal Pull: Pulls in enemies at mid-range in front.
+Pain_label3	神罗天征:中范围忍术伤害【塔有效】	Almighty Push: Mid-area ninjutsu damage. [Works on towers]
+Pain_label4	地爆天星:奥义召唤带吸引效果的巨石	Planetary Devastation: Ultimate. Summons a boulder that pulls enemies in.
+Pain_label5	六道佩恩见参:奥义2回收佩恩之力觉醒为长门	The Six Paths of Pain Appear: Ultimate 2. Reclaims Pain's power and awakens as Nagato.
+RikudoNaruto_label1	惑星·螺旋丸:瞬移至敌人身后并造成硬直伤害	Planetary Rasengan: Teleports behind an enemy and deals staggering damage.
+RikudoNaruto_label2	影分身之术EX:召唤使用螺旋乱丸攻击的分身	Shadow Clone Jutsu EX: Summons clones that attack with Rasengan Barrage.
+RikudoNaruto_label3	尾兽·螺旋手里剑:投掷带高速追尾特性的九尾查克拉手里剑	Tailed Beast Rasenshuriken: Throws a fast, homing Nine-Tails chakra shuriken.
+RikudoNaruto_label4	尾兽闪光弹:奥义鸣人高速冲刺并造成范围忍术伤害	Tailed Beast Flash Bomb: Ultimate. Naruto dashes at high speed, dealing area ninjutsu damage.
+RikudoNaruto_label5	九喇嘛模式:奥义2鸣人与九喇嘛完全同步，并召唤九喇嘛到战场摧毁遇到的敌方目标	Kurama Mode: Ultimate 2. Naruto fully syncs with Kurama and summons him onto the battlefield to crush every enemy in his path.
+SageJiraiya_label1	乱狮子发之术:前方小范围突进伤害	Wild Lion's Mane Jutsu: Small-area dash damage in front.
+SageJiraiya_label2	土遁·黄泉沼:制造困住敌方的沼泽	Earth Style: Swamp of the Underworld: Creates a swamp that traps enemies.
+SageJiraiya_label3	蛤蟆油弹Plus蛤蟆油炎弹:前方中范围忍术伤害	Toad Oil Bullet + Toad Oil Flame Bullet: Mid-area ninjutsu damage in front.
+SageJiraiya_label4	超大玉螺旋丸:奥义造成浮空并进行螺旋丸打击	Super Big Ball Rasengan: Ultimate. Launches enemies into the air and hits them with a Rasengan.
+SageJiraiya_label5	仙法·五右卫门:奥义2前方大范围忍术伤害	Sage Art: Goemon: Ultimate 2. Wide-area ninjutsu damage in front.
+SageNaruto_label1	仙法·大玉螺旋丸:前方小范围硬直伤害	Sage Art: Big Ball Rasengan: Staggering small-area damage in front.
+SageNaruto_label2	影分身之术:召唤使用螺旋丸攻击的分身	Shadow Clone Jutsu: Summons clones that attack with Rasengan.
+SageNaruto_label3	仙法·螺旋手里剑:投掷带范围伤害的风手里剑	Sage Art: Rasenshuriken: Throws a wind shuriken that deals area damage.
+SageNaruto_label4	仙法·螺旋多连丸:击飞敌人并持续造成控制性忍术伤害	Sage Art: Rasengan Barrage: Knocks enemies into the air and keeps hitting them with crowd-control ninjutsu damage.
+SageNaruto_label5	尾兽模式:奥义2一段时间内开启尾兽状态，期间普通攻击将破防，结束后进入？？？	Tailed Beast Mode: Ultimate 2. Enters Tailed Beast Mode for a time; normal attacks break through defenses. When it ends, Naruto enters ???
+Sai_label1	速写墨法:替换体术攻击为超兽伪画·蛇	Quick Ink Sketch: Replaces normal attacks with Super Beast Imitating Drawing: Snakes.
+Sai_label2	超兽伪画·虎:召唤带范围自爆大伤害的老虎	Super Beast Imitating Drawing: Tigers: Summons ink tigers that explode for heavy area damage.
+Sai_label3	墨刀伪画:奥义浮空击并触发超兽伪画·鹰	Ink Blade Drawing: Ultimate. Launches enemies into the air and triggers Super Beast Imitating Drawing: Hawks.
+Sai_label4	侦查模式:召唤墨鸟在骑乘状态下持续释放超兽伪画·鼠	Scout Mode: Rides an ink bird while continuously releasing Super Beast Imitating Drawing: Rats.
+Sai_label5	超兽伪画·森罗万象:奥义2持续造成突击伤害	Super Beast Imitating Drawing: All Creation: Ultimate 2. Deals continuous charging damage.
+Sakura_label1	医疗忍术:短时间内回复生命值	Medical Ninjutsu: Restores HP over a short time.
+Sakura_label2	樱花拳:小范围忍术伤害	Cherry Blossom Fist: Small-area ninjutsu damage.
+Sakura_label3	怪力模式:一段时间内大幅度提高普通攻击伤害	Super Strength Mode: Greatly increases normal attack damage for a time.
+Sakura_label4	樱花乱舞:奥义浮空击并对中范围造成忍术伤害	Cherry Blossom Frenzy: Ultimate. Launches enemies into the air and deals mid-area ninjutsu damage.
+Sakura_label5	百豪之术:奥义2连击并造成范围伤害	Strength of a Hundred Jutsu: Ultimate 2. A combo dealing area damage.
+Sasuke_label1	千鸟刀:前方突进并造成小范围控制性伤害	Chidori Blade: Dashes forward, dealing small-area crowd-control damage.
+Sasuke_label2	千鸟:突进并造成范围硬直忍术伤害	Chidori: Dashes in, dealing staggering area ninjutsu damage.
+Sasuke_label3	装遁:嘲讽敌人并使用千鸟流进行反击	Feint Style: Taunts enemies, then counterattacks with Chidori Current.
+Sasuke_label4	雷遁·麒麟:奥义浮空击并造成范围忍术伤害	Lightning Style: Kirin: Ultimate. Launches enemies into the air and deals area ninjutsu damage.
+Sasuke_label5	永恒模式:奥义2咒印后开启永恒万花筒写轮眼	Eternal Mode: Ultimate 2. After the Cursed Seal, Sasuke awakens the Eternal Mangekyo Sharingan.
+Shikamaru_label1	军师演法:鹿丸进行都短暂思考后获得一定量的查克拉	Strategist's Gambit: Shikamaru thinks for a moment, then gains some chakra.
+Shikamaru_label2	影缝:对远处的敌人进行忍术伤害并减速	Shadow Sewing: Deals ninjutsu damage to a distant enemy and slows them.
+Shikamaru_label3	影首缚颈术:长时间控制对方并造成持续伤害	Shadow Neck Bind Jutsu: Holds an enemy for a long time while dealing continuous damage.
+Shikamaru_label4	影子查克拉刀:奥义投掷阿斯玛的查克拉刀	Shadow Chakra Blades: Ultimate. Throws Asuma's chakra blades.
+Shikamaru_label5	爆式影潜:奥义2禁锢敌人后引爆起爆符	Exploding Shadow Trap: Ultimate 2. Binds enemies, then sets off explosive tags.
+Shino_label1	秘术·唤虫:短时间内替换体术攻击为召唤寄坏虫	Secret Technique: Insect Call: For a short time, replaces normal attacks with summoned destruction bugs.
+Shino_label2	秘术·虫分身:召唤虫分身追击并限制敌人的行动	Secret Technique: Insect Clone: Summons an insect clone that chases enemies and restricts their movement.
+Shino_label3	秘术·虫壁术:召唤一道寄坏虫组成的屏障击飞敌人	Secret Technique: Insect Wall: Raises a wall of destruction bugs that knocks enemies away.
+Shino_label4	秘术·虫玉:奥义释放大量寄坏虫弹开敌人并造成忍术伤害	Secret Technique: Insect Sphere: Ultimate. Releases a swarm of destruction bugs that blasts enemies away with ninjutsu damage.
+Shino_label5	秘术·虫龙卷风:奥义2释放一道由寄坏虫组成的龙卷，持续造成忍术伤害	Secret Technique: Insect Tornado: Ultimate 2. Unleashes a tornado of destruction bugs that deals continuous ninjutsu damage.
+Suigetsu_label1	豪水腕之术:突进并造成小范围忍术伤害	Great Water Arm Jutsu: Dashes in, dealing small-area ninjutsu damage.
+Suigetsu_label2	庖丁手里剑之术:投掷具有打断效果的斩首大刀并造成轨迹伤害	Executioner's Blade Throw: Hurls the Executioner's Blade, interrupting enemies and damaging everything in its path.
+Suigetsu_label3	水化豪斩刀:下次普通攻击造成大幅度伤害	Hydrification Great Slash: Your next normal attack deals massive damage.
+Suigetsu_label4	水遁·水铁炮之术:奥义发出轨迹伤害的子弹	Water Style: Water Gun Jutsu: Ultimate. Fires water bullets that damage everything in their path.
+Suigetsu_label5	水斩三昧:奥义2使用斩首大刀进行水属性连击	Water Slash Frenzy: Ultimate 2. A water-powered combo with the Executioner's Blade.
+Tenten_label1	忍具·起爆铁球:召唤出带爆炸效果的铁球	Ninja Tool: Explosive Iron Ball: Summons an iron ball that explodes.
+Tenten_label2	忍具·双刀:投掷两把带轨迹伤害的飞刀	Ninja Tool: Twin Blades: Throws two flying blades that damage everything in their path.
+Tenten_label3	忍具·极手里剑:短时间内快速投掷手里剑	Ninja Tool: Shuriken Storm: Rapidly throws shuriken for a short time.
+Tenten_label4	忍具·升龙:奥义使用近身武器进行攻击	Ninja Tool: Rising Dragon: Ultimate. Attacks with close-range weapons.
+Tenten_label5	忍具·双升龙:奥义2释放大量范围伤害的忍具	Ninja Tool: Rising Twin Dragons: Ultimate 2. Unleashes a storm of ninja tools that deal area damage.
+Tobi_label1	陀螺暴走:阿飞高速旋转身体造成突进伤害并拖曳敌人	Spinning Top Rampage: Tobi spins at high speed, charging into enemies and dragging them along.
+Tobi_label2	起爆地雷:投掷2枚带击倒效果的地雷	Explosive Landmines: Throws 2 landmines that knock enemies down.
+Tobi_label3	虚化:一段时间内阿飞于移动静止及普通攻击时将无视所有攻击	Intangibility: For a time, Tobi ignores all attacks while moving, standing still, or using normal attacks.
+Tobi_label4	神威:奥义瞬移至敌人身边并将其吸入异次元空间	Kamui: Ultimate. Teleports beside an enemy and sucks them into another dimension.
+Tobi_label5	神威火炎阵:奥义2释放大量火遁忍术并转移敌人到异空间	Kamui Inferno: Ultimate 2. Unleashes a torrent of Fire Style ninjutsu and warps enemies into another dimension.
+Tobirama_label1	影分身飞雷神之术:召唤分身并将敌人传送到面前	Shadow Clone Flying Thunder God: Summons clones and teleports enemies right in front of him.
+Tobirama_label2	水遁·水冲波:喷射带击退效果的高压水柱	Water Style: Water Shockwave: Blasts a high-pressure water jet that knocks enemies back.
+Tobirama_label3	水遁·水龙弹之术:前方中范围忍术伤害	Water Style: Water Dragon Jutsu: Mid-area ninjutsu damage in front.
+Tobirama_label4	激流三连蹴:奥义连击并造成范围忍术伤害	Torrent Triple Kick: Ultimate. A combo dealing area ninjutsu damage.
+Tobirama_label5	硬涡水刃:奥义2飞雷神连击并释放水遁漩涡	Hard Whirlpool Water Blade: Ultimate 2. A Flying Thunder God combo that ends in a Water Style whirlpool.
+Tsunade_label1	怪力天守拳:小范围复数忍术伤害	Super Strength Fist: Several hits of small-area ninjutsu damage.
+Tsunade_label2	乱身术:向前突进并造成敌方短时间内减速	Body Pathway Derangement: Dashes forward and briefly slows enemies.
+Tsunade_label3	口寄·蛞蝓:召唤能增殖的蛞蝓治疗战地青蛙	Summoning: Katsuyu: Summons Katsuyu, who splits apart to heal your minions on the battlefield.
+Tsunade_label4	怪力三连击:奥义连击并造成范围忍术伤害	Super Strength Triple Strike: Ultimate. A combo dealing area ninjutsu damage.
+Tsunade_label5	忍法·创造再生:奥义2大幅提高回复及攻击力	Ninja Art: Creation Rebirth: Ultimate 2. Greatly increases healing and attack power.
+fenglabel	解锁奥义1需要6000金	Unlocking Ultimate 1 costs 6000 gold.
+fenglabel2	解锁奥义2需要12000金并且先解锁奥义1	Unlocking Ultimate 2 costs 12000 gold and requires Ultimate 1 first.

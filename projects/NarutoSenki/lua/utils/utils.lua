@@ -24,6 +24,8 @@ function tools.addSprites(...)
     assert(not ... ~= nil, 'addSprites: The table can not be nil')
     for _, v in ipairs {...} do
         sharedSpriteFrameCache:addSpriteFramesWithFile(v)
+        -- English mode: swap in the translated frames (Resources/Lang/en/<plist>)
+        lang.applyOverride(v)
     end
 end
 
