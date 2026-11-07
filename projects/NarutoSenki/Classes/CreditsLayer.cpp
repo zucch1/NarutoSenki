@@ -51,13 +51,12 @@ bool CreditsLayer::init()
 	staff_title->setPosition(Vec2(2, winSize.height - staff_title->getContentSize().height - 2));
 	addChild(staff_title, 3);
 
-	auto credit01 = Sprite::createWithSpriteFrameName("credits01.png");
-	credit01->setPosition(Vec2(winSize.width / 2 - 20, winSize.height / 2 + 80));
-	addChild(credit01);
-
-	auto credit02 = Sprite::createWithSpriteFrameName("credits02.png");
-	credit02->setPosition(Vec2(winSize.width / 2 + 15, winSize.height / 2 - 60));
-	addChild(credit02);
+	// credits01.png is the Chinese-language copy of the attribution notice.
+	// Keep the original atlas data intact, but show the existing English
+	// attribution card only in this English-first build.
+	auto creditEnglish = Sprite::createWithSpriteFrameName("credits02.png");
+	creditEnglish->setPosition(Vec2(winSize.width / 2, winSize.height / 2));
+	addChild(creditEnglish);
 
 	auto returnBtnItem = MenuItemSprite::create(
 		Sprite::create("UI/return_btn.png"),
